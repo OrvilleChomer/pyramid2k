@@ -1,2 +1,2 @@
-# pyramid2k
-Remake of Pyramid 2000 Text Adventure Game in HTML and JavaScript
+# Remake of Pyramid 2000 Text Adventure Game in HTML and JavaScript
+
