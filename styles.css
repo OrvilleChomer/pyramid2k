@@ -1,0 +1,270 @@
+
+body {
+    background:#353435;
+    color:#f0f5f5;
+    font-family:Menlo, Monaco, 'Courier New', monospace;
+    font-size:24px;
+    box-sizing: border-box;
+}
+
+#cntr {
+    position:fixed;
+    top:0px;
+    left:0px;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+}
+
+#goldChrome {
+    position:absolute;
+    top:0px;
+    left:0px;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+    background:gold;
+}
+
+#inset {
+    position:absolute;
+    left:16px;
+    top:16px;
+    background:gold;
+    width:200px;
+    height:200px;
+    z-index:2;
+    border-right:solid red 3px;
+    border-bottom:solid red 3px;
+    border-bottom-right-radius:90px;
+}
+
+#thumbNail {
+    position:absolute;
+    left:6px;
+    top:6px;
+    border:solid orange 3px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#gameViewport {
+    position:absolute;
+    top:16px;
+    left:16px;
+    bottom:16px;
+    right:16px;
+    border:solid red 3px;
+    border-radius:12px;
+    overflow:hidden;
+    background:#353435;
+    
+}
+
+#outerFrame {
+    position:absolute;
+    top:5px;
+    left:5px;
+    right:5px;
+    height:600px;
+    margin:0px;
+    padding:0px;
+   /* border:solid yellow 1px;  */
+    overflow:hidden;
+}
+
+#innerFrame {
+    position:absolute;
+    left:4px;
+    right:10px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    overflow-scrolling: touch !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin:0px;
+    padding:0px;
+}
+
+#history {
+    padding:0px;
+    margin:0px;
+}
+
+#cmdArea {
+    position:absolute;
+    left:6px;
+    bottom:16px;
+}
+
+#promptChar {
+    position:absolute;
+    left:6px;
+    bottom:6px;
+    height:22px;
+    width:20px;
+}
+
+#cmdLine {
+    position:absolute;
+    left:26px;
+    bottom:-1px;
+    background:#353435;
+    border:none;
+    color:white;
+    font-family:Menlo, Monaco, 'Courier New', monospace;
+    font-size:20px;
+    text-transform: uppercase;
+}
+
+.textGlow {
+    color:white;
+    /* text-shadow: -3px -3px 14px white, 3px 3px 14px white, -3px 3px 14px white, 3px -3px 14px white;
+    */
+}
+
+li {padding-left:16px;}
+
+
+#tint {
+    position:absolute;
+    background:black;
+    left:0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    opacity:0.6;
+    z-index:10;
+    display:none;
+}
+
+#dia {
+    position:absolute;
+    z-index:20;
+    display:none;
+    background: #c0ded9;
+    color:#3b3a30;
+    border: solid #b2c2bf 3px;
+    left:20px;
+    top:20px;
+    right:20px;
+    bottom:20px;
+    max-height:300px;
+}
+
+#diaSaveInfo {
+    position:absolute;
+    left:40px;
+    right:40px;
+    top:230px;
+    text-align:center;
+}
+
+
+.gameSavePrompt {
+    position:absolute;
+    top:25px;
+    left:40px;
+    right:40px;
+    text-align:center;
+}
+
+.loadGamePrompt {
+    position:absolute;
+    top:25px;
+    left:40px;
+    right:40px;
+    text-align:center;
+}
+
+#gameName {
+    position:absolute;
+    background:lightyellow;
+    top:70px;
+    font-size:30pt;
+    left:40px;
+    right:40px;
+    text-transform: uppercase;
+}
+
+.btnArea {
+    position:absolute;
+    top:150px;
+    left:40px;
+    right:40px;
+}
+
+.btnArea2 {
+    position:absolute;
+    bottom:20px;
+    left:40px;
+    right:40px;
+}
+
+.pnlBtn {
+    width:160px;
+    background:darkblue;
+    color:gold;
+    border:solid gold 1px;
+    border-radius:6px;
+    margin-left:6px;
+    margin-right:6px;
+    font-size:18pt;
+    cursor:pointer;
+}
+
+.pnlBtn:disabled {
+    background:silver;
+    color:gray;
+    border:solid gray 1px;
+}
+
+
+.gameListCntr {
+    position:absolute;
+    left:40px;
+    right:40px;
+    top:70px;
+    bottom:80px;
+    overflow-y:auto;
+    border:solid brown 1px;
+    background:lightyellow;
+}
+
+
+#gameList {
+    margin:0px;
+    padding:0px;
+}
+
+.gameListItm {
+    cursor:pointer;
+    border-bottom:solid gray 1px;
+    padding-left:0px;
+    margin-left:0px;
+    height:50px;
+    line-height:50px;
+}
+
+.gameListItmSel {
+    cursor:pointer;
+    border-bottom:solid gray 1px;
+    padding-left:0px;
+    margin-left:0px;
+    height:50px;
+    line-height:50px;
+    background:darkblue;
+    color:lightyellow;
+}
+
+.lnkBtn {
+    background: greenyellow;
+    border: solid green 1px;
+    color:black;
+    border-radius:4px;
+    padding:3px;
+    padding-left:5px;
+    padding-right:5px;
+    font-size:12pt;
+    font-family:tahoma;
+    text-decoration: none;
+}
