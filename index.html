@@ -1,17 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+    <head>
 
-    <title>Pyramind 2000 Text Adventure Game</title>
-    
-    <link rel="stylesheet" href="/style.css">
+<!-- *********************************************************************
+   This File:
+       index.php
+       
+       
+   For now this test page can be run using MAMP at this URL:
 
-    <script src="/script.js" defer></script>
-  </head>  
-  <body>
+       http://orvilles-imac.local:8888/p2000/
+       
+   
+   Game Reference URLs:
+   ====================
+       - Walkthrough on TRS-80 Model I:
+          https://www.youtube.com/watch?v=J5zLbLD1jns
+
+       - Overall info page on figmentfly.com:
+          http://www.figmentfly.com/pyramid2000/pyramid.html
+          (has original packaging artwork on it)          
+
+       - Overall info page on Computer Archeology website:
+          https://computerarcheology.com/CoCo/Pyramid/
+          (note: has TRS-80 Color Computer emulation of game on it)
+
+          MORE INTERESTING STUFF ON THIS SITE:
+          - https://computerarcheology.com/CoCo/Pyramid/Code.html#main-loop
+
+          - https://computerarcheology.com/CoCo/Pyramid/Code.html#script-commands
+
+          - https://computerarcheology.com/CoCo/Pyramid/Code.html#room-descriptions
+
+          - https://computerarcheology.com/CoCo/Pyramid/Code.html#general-error-messages
+
+          - https://computerarcheology.com/CoCo/Pyramid/Code.html#object-descriptions
+
+          - https://computerarcheology.com/CoCo/Pyramid/Code.html#game-specific-messages
+
+          - https://computerarcheology.com/CoCo/Pyramid/Code.html#room-scripts
+
+          - https://computerarcheology.com/CoCo/Pyramid/Code.html#general-command-handler
+
+          - https://computerarcheology.com/CoCo/Pyramid/Code.html#word-table
+
+
+ ********************************************************************* -->
     
-  </body>
+        <title>Pyramid 2000</title>
+        <link rel="stylesheet" media="all" href="./styles.css?r=1" />
+        <!-- <link rel="manifest" href="./manifest.json"> -->
+        <meta name="apple-mobile-web-app-title" content="Pyramid 2K">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name = "viewport" content = "user-scalable=no, width=device-width">
+        <meta HTTP-EQUIV="PRAGMA" content="NO-CACHE" />
+
+        <link rel="apple-touch-icon" href="./touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./icon152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./icon180.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="./icon167.png">
+    
+    </head>
+
+    <body onload="pageSetup()" onresize="pageResize()">
+    <div id="cntr">
+        <div id="inset">
+            <img id="thumbNail" src="./touch-icon-iphone.png" width="160" height="160" border="0">
+        </div><!-- inset -->
+        <div id="goldChrome">
+        <div id="gameViewport">
+        <div id="outerFrame">
+            <div id="innerFrame">
+                <ul id="history">
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                    <li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li>
+                </ul><!-- history -->
+            </div><!-- innerFrame -->
+        </div><!-- outerFrame -->
+        <div id="cmdArea">
+        <div id="promptChar">:</div><input 
+        autocomplete='off' autofocus
+        id="cmdLine" class="textGlow" placeholder="Select here to type in your game commands">
+        </div><!-- cmdArea -->
+        </div><!-- gameViewport -->
+        </div><!-- goldChrome -->
+        <div id="tint"></div><!-- tint -->
+        <div id="splash">
+        </div><!-- splash -->
+        <div id="dia">
+        </div><!-- dia -->
+</div><!-- cntr -->
+
+    <script src="./msgBoxLib.js?r=1"></script>
+    <script src="./test.js?r=1"></script>
+    </body>
 </html>
