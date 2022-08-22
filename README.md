@@ -1,3 +1,3 @@
 # Pyramid 2000 Text Adventure Game 
-Remake of Pyramid 2000 Text Adventure Game  in HTML and JavaScript.
+Remake of Pyramid 2000 Text Adventure Game  in HTML, CSS and JavaScript.
 
